@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------navbar------- */
+
+body{
+    font-family: white;
+    background: rgb(175, 99, 99);
+    color: black;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  h4 {
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
+    line-height: 2.25;
+    /* margin-bottom: 0.75rem; */
+    font-family: sans-serif;
+    font-size: 1.875rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    body {
+      font-size: 1rem;
+    }
+    h4 {
+      line-height: 1;
+      font-size: 2rem;
+    }
+  }
+
+  /* navbar */
+
+  nav {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 2.3);
+  }
+  nav:hover{
+    background: rgb(244, 245, 177);
+  }
+  .nav-center {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-toggle {
+    font-size: 1.5rem;
+    color: brown;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+  }
+  .nav-toggle:hover {
+    color: rgb(255, 7, 7);
+    transform: rotate(90deg);
+  }
+  .logo {
+    height: 40px;
+  }
+  .links a {
+    color: green;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.3rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition:  all 0.3s linear;
+  }
+
+  .links a:hover {
+    background: burlywood;
+    color: black;
+    padding-left: 1.5rem;
+    font-weight: bold;
+  }
+  .social-icons {
+    display: none;
+  }
+  .links {
+    display: flex;
+    height: 0px;
+    overflow: hidden;
+    transition:all 0.3s linear;
+  }
+  .show-links {
+    height: 10rem;
+  }
+
+
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .links {
+        height: auto;
+        display: flex;
+      }
+      .links a {
+        padding: 0;
+        margin: 0 0.5rem;
+      }
+      .links a:hover {
+        padding: 0;
+        background: transparent;
+      }
+      .social-icons {
+        display: flex;
+      }
+      .social-icons a {
+        margin: 0 0.5rem;
+        color: blue;
+        transition: all 0.3s linear;
+      }
+      .social-icons a:hover {
+        color: black;
+      }
+}
