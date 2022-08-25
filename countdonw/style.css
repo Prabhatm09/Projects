@@ -1,0 +1,126 @@
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: hsl(205, 100%, 96%);
+  color: hsl(66, 100%, 12%);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+
+h3,
+h4 {
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color:hsl(0, 0%, 55%);
+}
+@media screen and (min-width: 800px) {
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+ 
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* section */
+
+.section-center {
+  width: 90vw;
+  margin: 5rem auto;
+  max-width: 1170px;
+}
+
+
+/*
+=============== 
+Countdown Timer
+===============
+*/
+.gift-img {
+  margin-bottom: 2rem;
+}
+.gift-info h3 {
+  text-transform: uppercase;
+  color: rgb(255, 0, 0);
+  letter-spacing: 1.85rem;
+}
+.gift-info p {
+  color:rgb(63, 62, 62);
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+.date {
+  color:rgb(214, 210, 210);
+  font-size: 0.85rem;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 3rem;
+    width: 95vw;
+  }
+  .gift-img {
+    margin-bottom: 0;
+  }
+}
+.gift-info p {
+  margin: 2rem 0;
+}
+.deadline {
+  display: flex;
+}
+.deadline-format {
+  background:  hsl(178, 61%, 16%);
+  color: white;
+  margin-right: 1rem;
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 20px;
+}
+.deadline-format span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+.deadline h4:not(.expired) {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing:0.25rem;
+}
