@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- header -->
+    <header>
+      <video controls muted autoplay loop class="video-container">
+        <source src="./Teaser.mp4" type="video/mp4" />
+      </video>
+      <h1>Teaser of Vikarm Vedha</h1>
+      <!-- video switch -->
+      <button class="switch-btn">
+        <span>
+          play
+        </span>
+        <span>
+          pause
+        </span>
+        <span class="switch"></span>
+      </button>
+    </header>
+    <!-- javascript -->
+    <script>
+        const btn = document.querySelector(".switch-btn");
+const video = document.querySelector(".video-container");
+
+btn.addEventListener("click", function () {
+  if (!btn.classList.contains("slide")) {
+    btn.classList.add("slide");
+    video.pause();
+  } else {
+    btn.classList.remove("slide");
+    video.play();
+  }
+});
+
+    </script>
+  </body>
+</html>
