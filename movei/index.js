@@ -1,4 +1,4 @@
-const menu = [
+const movieArray = [
     {
       id: 1,
       title: "Minious",
@@ -85,12 +85,12 @@ const menu = [
   const btnContainer = document.querySelector(".btn-container");
   // display all items when page loads
   window.addEventListener("DOMContentLoaded", function () {
-    diplayMenuItems(menu);
-    displayMenuButtons();
+    diplayMovieContainer(movieArray);
+    displayMovieButtons();
   });
   
-  function diplayMenuItems(menuItems) {
-    let displayMenu = menuItems.map(function (item) {
+  function diplayMovieContainer(movieItems) {
+    let displayMovie = movieItems.map(function (item) {
   
   
       return `<article class="movie-container">
@@ -106,13 +106,13 @@ const menu = [
             </div>
           </article>`;
     });
-    displayMenu = displayMenu.join("");
+    displayMovie = displayMovie.join("");
    
   
-    sectionCenter.innerHTML = displayMenu;
+    sectionCenter.innerHTML = displayMovie;
   }
-  function displayMenuButtons() {
-    const categories = menu.reduce(
+  function displayMovieButtons() {
+    const categories = movieArray.reduce(
       function (values, item) {
         if (!values.includes(item.category)) {
           values.push(item.category);
@@ -137,16 +137,16 @@ const menu = [
       btn.addEventListener("click", function (e) {
         
         const category = e.currentTarget.dataset.id;
-        const menuCategory = menu.filter(function (menuItem) {
+        const movieCategory = movieArray.filter(function (movieItems) {
           
-          if (menuItem.category === category) {
-            return menuItem;
+          if (movieItems.category === category) {
+            return movieItems;
           }
         });
         if (category === "all") {
-          diplayMenuItems(menu);
+          diplayMovieContainer(movieArray);
         } else {
-          diplayMenuItems(menuCategory);
+          diplayMovieContainer(movieCategory);
         }
       });
     });
